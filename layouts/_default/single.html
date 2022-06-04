@@ -1,12 +1,12 @@
 {{ partial "head.html" . }}
 
 <body>
-    <div class="main animate__animated animate__fadeInDown">
+    <div class="main animate__animated animate__fadeInDown fadeInDown">
         {{ partial "nav.html" . }}
         {{ partial "header.html" . }}
-        <div class="content">
+        <div class="content fadeInDown">
             <div class="post_page">
-                <div class="post animate__animated animate__fadeInDown">
+                <div class="post animate__animated animate__fadeInDown fadeInDown">
                     <div class="post_title post_detail_title">
                         <h2><a href='{{ .RelPermalink }}'>{{ .Title }}</a></h2>
                         <span class="date">{{ .Date.Format "2006.01.02" }}</span>
