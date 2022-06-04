@@ -465,7 +465,8 @@ hr {
 }
 
 .markdown h1 {
-  font-size: 1.35em;
+  font-size: 1.5em;
+  text-align:center 
 }
 
 .markdown h2 {
@@ -566,7 +567,7 @@ hr {
 .markdown b,
 .markdown em {
   padding: 1px 2px;
-  background-color: #fcfcf0;
+  background-color: #FCF5EE;
   font-weight: normal;
 }
 
