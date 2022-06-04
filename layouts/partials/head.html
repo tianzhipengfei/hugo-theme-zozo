@@ -39,13 +39,22 @@
 	{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end }}
     
+    {{ if .Site.Params.enableMathJax }}
+    <link rel="dns-prefetch" href="//cdn.bootcss.com" />
+    <link rel="dns-prefetch" href="//cdn.mathjax.org" />
+    {{ end }}
+    
     <link rel="shortcut icon" href="{{ "images/favicon.ico" | absURL }}" />
 
     <link rel="stylesheet" type="text/css" media="screen" href="{{ .Site.BaseURL }}css/normalize.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="{{ "css/zozo.css" |absURL }}" />
-	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="{{ "css/highlight.css" | absURL }}" />
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ "css/animate.min.css" |absURL }}" />
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ "css/remixicon.css" |absURL }}" />
+    
+    <!-- 下面两个国内被封了，下载本地了 -->
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" /> -->
 
     <!-- custom css -->
     {{ range .Site.Params.customCSS }}
